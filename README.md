@@ -14,6 +14,24 @@ Python, Spark and API Based project to show Analytics performed on an E-Commerce
 Deployment: The final step is to deploy the dashboard and API to a server. Platforms like AWS or Heroku can be used to deploy the dashboard and API.
 
 
+------ Django -------
+To integrate Django according to your database schema, you'll need to follow these steps:
+
+Define the database schema: Define your database schema by creating a data model using Django's model system. A model is a Python class that represents a database table, and each attribute of the class represents a field in the table.
+
+> Create a Django app: Create a new Django app by running the following command in your terminal: python manage.py startapp myappname. Replace myappname with the name of your app.
+
+> Define the model: In the models.py file of your app, define the model by creating a new class that inherits from the django.db.models.Model class. Define the fields of your model by creating attributes for each field.
+
+> Create a migration: After defining the model, you need to create a migration to apply the changes to the database. Run the following command in your terminal: python manage.py makemigrations. This command will create a migration file in the migrations directory of your app.
+
+> Apply the migration: Apply the migration to the database by running the following command in your terminal: python manage.py migrate. This command will create the database table based on your model.
+
+> Register the model: To access the model in the Django admin interface, you need to register it. In the admin.py file of your app, import the model and register it using the admin.site.register() method.
+
+> Use the model: You can use the model in your views to retrieve data from the database, create new records, or update existing ones. Use Django's QuerySet API to interact with the database.
+
+That's it! By following these steps, you can integrate Django according to your database schema and start building your application. Remember to run python manage.py runserver to start the development server and test your app.
 
 
 
